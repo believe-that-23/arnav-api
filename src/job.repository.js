@@ -5,6 +5,10 @@ export async function getJobDetailsRepo(data){
     return await jobDetail.save();
 }
 
-export async function apiDataFetchRepo(data){
+export async function apiDataFetchRepo(){
     return await jobModel.find();
+}
+
+export async function removeData() {
+    return await jobModel.deleteMany({});
 }
